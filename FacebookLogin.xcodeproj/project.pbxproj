@@ -16,6 +16,10 @@
 		E8CB8E4120006EF800519A4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CB8E4020006EF800519A4A /* main.m */; };
 		E8CB8E4B20006EF800519A4A /* FacebookLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CB8E4A20006EF800519A4A /* FacebookLoginTests.m */; };
 		E8CB8E5620006EF800519A4A /* FacebookLoginUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CB8E5520006EF800519A4A /* FacebookLoginUITests.m */; };
+		E8CB8E652000710F00519A4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CB8E642000710E00519A4A /* Bolts.framework */; };
+		E8CB8E672000712000519A4A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CB8E662000712000519A4A /* FBSDKCoreKit.framework */; };
+		E8CB8E692000712D00519A4A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CB8E682000712D00519A4A /* FBSDKLoginKit.framework */; };
+		E8CB8E6C2001B74A00519A4A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CB8E6B2001B74A00519A4A /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,11 @@
 		E8CB8E5120006EF800519A4A /* FacebookLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CB8E5520006EF800519A4A /* FacebookLoginUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginUITests.m; sourceTree = "<group>"; };
 		E8CB8E5720006EF800519A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8CB8E642000710E00519A4A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E8CB8E662000712000519A4A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E8CB8E682000712D00519A4A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E8CB8E6A2001B74A00519A4A /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E8CB8E6B2001B74A00519A4A /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CB8E652000710F00519A4A /* Bolts.framework in Frameworks */,
+				E8CB8E672000712000519A4A /* FBSDKCoreKit.framework in Frameworks */,
+				E8CB8E692000712D00519A4A /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,7 @@
 		E8CB8E2220006EF700519A4A = {
 			isa = PBXGroup;
 			children = (
+				E8CB8E6320006F0C00519A4A /* Frameworks */,
 				E8CB8E2D20006EF700519A4A /* FacebookLogin */,
 				E8CB8E4920006EF800519A4A /* FacebookLoginTests */,
 				E8CB8E5420006EF800519A4A /* FacebookLoginUITests */,
@@ -104,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				E8CB8E2E20006EF700519A4A /* AppDelegate.h */,
+				E8CB8E6A2001B74A00519A4A /* HomeViewController.h */,
+				E8CB8E6B2001B74A00519A4A /* HomeViewController.m */,
 				E8CB8E2F20006EF700519A4A /* AppDelegate.m */,
 				E8CB8E3120006EF800519A4A /* ViewController.h */,
 				E8CB8E3220006EF800519A4A /* ViewController.m */,
@@ -133,6 +148,16 @@
 				E8CB8E5720006EF800519A4A /* Info.plist */,
 			);
 			path = FacebookLoginUITests;
+			sourceTree = "<group>";
+		};
+		E8CB8E6320006F0C00519A4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8CB8E682000712D00519A4A /* FBSDKLoginKit.framework */,
+				E8CB8E662000712000519A4A /* FBSDKCoreKit.framework */,
+				E8CB8E642000710E00519A4A /* Bolts.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +296,7 @@
 				E8CB8E3320006EF800519A4A /* ViewController.m in Sources */,
 				E8CB8E3020006EF700519A4A /* AppDelegate.m in Sources */,
 				E8CB8E4120006EF800519A4A /* main.m in Sources */,
+				E8CB8E6C2001B74A00519A4A /* HomeViewController.m in Sources */,
 				E8CB8E3920006EF800519A4A /* FacebookLogin.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +462,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QB3R6SYM9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = FacebookLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = naga.FacebookLogin;
@@ -450,6 +480,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QB3R6SYM9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = FacebookLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = naga.FacebookLogin;

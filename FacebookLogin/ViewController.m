@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "HomeViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface ViewController ()
 
@@ -16,7 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    // Optional: Place the button in the center of your view.
+    loginButton.center = self.view.center;
+    [self.view addSubview:loginButton];
+    loginButton.readPermissions = @[@"email"];
+
+    NSLog(@"%@", loginButton.readPermissions = @[@"email"]);
+
+    // Extend the code sample from 6a. Add Facebook Login to Your Code
+    // Add to your viewDidLoad method:
+    loginButton.readPermissions = @[@"public_profile", @"email"];
+ 
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        NSLog(@"Tocken Number %@", FBSDKAccessTokenChangeNewKey);
+        // User is logged in, do work such as go to next view controller.
+      
+       // [self performSegueWithIdentifier:@"HomePage" sender:self];
+
+    }
+    
 }
 
 
@@ -26,4 +49,13 @@
 }
 
 
+// Add this to the header of your file, e.g. in ViewController.m
+// after #import "ViewController.h"
+
+
+// Add this to the body
+
+
 @end
+
+
